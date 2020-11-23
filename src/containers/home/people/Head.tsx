@@ -1,9 +1,11 @@
 import React from "react";
 import { ReactComponent as HappyFaceSvg } from "assets/svg/happy-face.svg";
 import { Button } from "components";
-interface Props {}
+interface Props {
+  onAddRequest(): void;
+}
 
-const Head: React.FC<Props> = () => {
+const Head: React.FC<Props> = ({ onAddRequest }) => {
   return (
     <div className="md:flex px-12 items-center justify-between">
       <div className="md:w-8/12 flex">
@@ -20,6 +22,7 @@ const Head: React.FC<Props> = () => {
         <Button title="Edit" />
         <Button
           title="Add"
+          onClick={onAddRequest}
           className="ml-4 bg-purple-200 text-purple-500"
           customColor
         />

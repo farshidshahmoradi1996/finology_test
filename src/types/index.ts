@@ -5,8 +5,19 @@ export interface IComment {
   avatar: string;
 }
 export interface IPeople {
+  id: number;
   name: string;
   position: string;
   description: string;
   avatar: string;
+}
+export interface IPeopleFormData {
+  name: string;
+  position: string;
+  description: string;
+}
+
+export interface IPoepleAction {
+  type: "add" | "delete" | "edit";
+  payload: any;
 }

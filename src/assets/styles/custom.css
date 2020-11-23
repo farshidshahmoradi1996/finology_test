@@ -20,3 +20,13 @@ body {
     max-width: 1280px !important;
   }
 }
+
+textarea,
+textarea:active,
+textarea:focus,
+button,
+button:active,
+input:active,
+input:focus {
+  outline: none !important;
+}
