@@ -1,0 +1,10 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "javascript.validate.enable": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  }
+}
