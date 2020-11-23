@@ -6,6 +6,17 @@ h4,
 h5,
 h6,
 input,
+li,
 textarea {
   font-family: Nunito;
+}
+
+body {
+  overflow-x: hidden !important ;
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1280px !important;
+  }
 }

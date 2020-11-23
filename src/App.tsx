@@ -1,11 +1,9 @@
 import React from "react";
 
+import Home from "pages/Home";
+/* We have No Router Because This Is Only 1 Page :) */
 function App() {
-  return (
-    <div className="App">
-      <h1 className="bg-red-600">Helloooo</h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
