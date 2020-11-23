@@ -1,10 +1,13 @@
 import React from "react";
-import { Landing } from "containers";
+import { Landing, Content, People, PeopleComments } from "containers";
 
 function Home() {
   return (
     <>
       <Landing />
+      <Content />
+      <PeopleComments />
+      <People />
     </>
   );
 }
