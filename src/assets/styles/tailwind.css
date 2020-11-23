@@ -1,0 +1,17 @@
+/*tailwind*/
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+
+@import url(fonts.css);
+@import url(custom.css);
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
