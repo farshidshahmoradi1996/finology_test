@@ -23,7 +23,7 @@ const PeopleCard: React.FC<Props> = ({
       onClick={() => onSelect(data?.id)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="bg-white fadeInUp overflow-hidden relative animated shadow-md rounded-lg mx-2 md:mx-8  my-2 md:my-6  w-40 h-60 cursor-pointer duration-300 hover:shadow-xl"
+      className="bg-white fadeInUp overflow-hidden relative animated shadow-md rounded-lg mx-2 md:mx-8  my-2 md:my-6 w-40 md:w-48 h-60 cursor-pointer duration-300 hover:shadow-xl"
     >
       <img
         src={data.avatar?.name ? URL.createObjectURL(data.avatar) : data.avatar}

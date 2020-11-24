@@ -4,7 +4,7 @@ import FooterLeft from "assets/svg/footer-rounded-001.svg";
 import LogoImg from "assets/imgs/logo.png";
 const Footer: React.FC = () => {
   return (
-    <div className="mt-20  bg-primary py-10 relative overflow-hidden ">
+    <div className="mt-28  bg-primary py-10 relative overflow-hidden ">
       <div className="container md:flex relative z-20 px-6 md:px-0">
         <div className="md:w-4/12">
           <div className="flex  items-center mt-8">

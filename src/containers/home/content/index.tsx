@@ -3,12 +3,12 @@ import ContentOneImg from "assets/imgs/content-001.png";
 import ContentTwoImg from "assets/imgs/content-002.png";
 const Content: React.FC = () => {
   return (
-    <div className="container mt-20">
+    <div className="container mt-28">
       <div className="flex flex-col-reverse md:flex-row">
         <div className="w-full md:w-1/2">
           <img src={ContentOneImg} alt="content " />
         </div>
-        <div className="w-full md:w-1/2 mt-16 px-4 lg:px-16">
+        <div className="w-full md:w-1/2 mt-16 px-4 lg:pl-16">
           <h2 className="text-primary text-2xl font-bold">
             We can give you our
             <br />
@@ -28,7 +28,7 @@ const Content: React.FC = () => {
         </div>
       </div>
       <div className="md:flex">
-        <div className="w-full md:w-1/2 mt-16 px-4 lg:px-16">
+        <div className="w-full md:w-1/2 mt-16 px-4 lg:pr-16">
           <h2 className="text-primary text-2xl font-bold">
             Easy access.
             <br />

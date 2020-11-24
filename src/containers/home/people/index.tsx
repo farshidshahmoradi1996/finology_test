@@ -36,7 +36,7 @@ const People: React.FC = () => {
   };
   return (
     <>
-      <div className="container">
+      <div className="container mt-28">
         <Head
           onAddRequest={() => {
             setEditData(null);

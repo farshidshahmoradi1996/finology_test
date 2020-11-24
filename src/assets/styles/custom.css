@@ -62,7 +62,7 @@ input:focus {
 }
 .animated {
   animation-duration: 400ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 
 @keyframes fadeOutDown {

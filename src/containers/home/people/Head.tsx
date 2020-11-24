@@ -18,8 +18,8 @@ const Head: React.FC<Props> = ({
   onDelete,
 }) => {
   return (
-    <div className="md:flex  md:px-12 items-center justify-between">
-      <div className="md:w-8/12 w-full flex flex flex-col md:flex-row  items-center container px-12">
+    <div className="md:flex  items-center justify-between">
+      <div className="md:w-8/12 w-full flex flex flex-col md:flex-row  items-center container ">
         <div
           className="w-12 h-12 bg-pink-500 rounded-full flex justify-center items-center"
           style={{ boxShadow: "0 10px 10px #fbc2ff" }}

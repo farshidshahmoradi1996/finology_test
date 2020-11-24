@@ -6,10 +6,16 @@ const Banner: React.FC = () => {
     <div className="md:flex container pt-8 z-20 relative">
       <div className="md:w-1/2 w-full ">
         <div className=" pt-16">
-          <h1 className="font-bold text-white select-none  leading-relaxed  text-5xl text-center md:text-left">
+          <h1
+            style={{ animationDelay: "500ms" }}
+            className="font-bold fadeInUp animated text-white select-none  leading-relaxed  text-5xl text-center md:text-left"
+          >
             Make development <br /> easy with us.
           </h1>
-          <p className="text-white text-md  select-none mt-2 px-4 md:px-0 text-center md:text-left">
+          <p
+            style={{ animationDelay: "1s" }}
+            className="text-white fadeInUp animated  text-md  select-none mt-2 px-4 md:px-0 text-center md:text-left"
+          >
             Doing development can never be easy, and it takes time and
             resources.
             <br />

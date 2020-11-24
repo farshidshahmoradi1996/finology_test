@@ -15,7 +15,7 @@ const Button: React.FC<Props> = ({
   return (
     <button
       {...rest}
-      className={`rounded-md font-bold px-6 py-2 select-none ${
+      className={`rounded-md font-bold px-6 py-2 select-none hover:shadow-xl duration-300 ${
         !customColor && "bg-yellow-100 text-yellow-500"
       } ${className}`}
     >
