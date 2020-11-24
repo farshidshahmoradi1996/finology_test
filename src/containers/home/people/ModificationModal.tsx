@@ -1,50 +1,78 @@
 import { Backdrop, Button, TextArea, TextBox } from "components";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ReactComponent as CancelSvg } from "assets/svg/cancel.svg";
 import AvatarEdit from "./AvatarEdit";
 import { IPeople, IPeopleFormData } from "types";
 interface Props {
   isOpen: boolean;
   onCloseRequested(): void;
-  data?: IPeople;
-  onSave(newData?: IPeopleFormData): void;
+  data: IPeople | null;
+  onSave(newData: IPeopleFormData): void;
 }
 
 const ModificationModal: React.FC<Props> = ({
   isOpen,
   onCloseRequested,
   data,
+  onSave,
 }) => {
   const [name, setName] = useState(data?.name || "");
   const [position, setPosition] = useState(data?.position || "");
   const [description, setDescription] = useState(data?.description || "");
+  const [avatar, setAvatar] = useState(data?.avatar || "");
   useEffect(() => {
     document.body.style.overflowY = isOpen ? "hidden" : "initial";
   }, [isOpen]);
-
+  useEffect(() => {
+    setName(data?.name || "");
+    setPosition(data?.position || "");
+    setDescription(data?.description || "");
+    setAvatar(data?.avatar || null);
+  }, [data]);
   const onSubmit = () => {
-    // onSave({name})
-    console.log({ name, position, description });
+    onSave({ name, position, description, avatar });
+    resetForm();
+    onCloseRequested();
   };
-
+  const resetForm = () => {
+    setName("");
+    setDescription("");
+    setAvatar(null);
+    setPosition("");
+  };
+  const imgeInputRef = useRef(null as any);
   return (
     <>
+      <input
+        onChange={(e: any) => setAvatar(e.target.files[0])}
+        ref={imgeInputRef}
+        accept="image/x-png,image/jpeg,image/gif"
+        type="file"
+        style={{ display: "none" }}
+      />
       <Backdrop visible={isOpen}>
         <div
-          className="w-11/12 md:w-3/12  bg-white rounded-xl shadow-xl p-4"
+          className={`w-11/12   ${
+            isOpen ? "fadeInUp animated" : "fadeOutDown animated"
+          } md:w-3/12  bg-white rounded-xl shadow-xl p-4`}
           onClick={(e) => {
             e.preventDefault();
           }}
         >
           <div className="flex item-center justify-between">
-            <p className="text-primary text-md font-bold">Add Poeple</p>
+            <p className="text-primary text-md font-bold">{`${
+              data ? "Edit" : "Add"
+            } Poeple`}</p>
             <div className="cursor-pointer" onClick={onCloseRequested}>
               <CancelSvg />
             </div>
           </div>
           <div className="mt-8">
             <div className="flex justify-center">
-              <AvatarEdit />
+              <AvatarEdit
+                onClick={() => imgeInputRef.current.click()}
+                src={avatar}
+              />
             </div>
 
             <TextBox
@@ -65,9 +93,10 @@ const ModificationModal: React.FC<Props> = ({
             <TextArea
               label="Description"
               onChange={(e) => setDescription(e.currentTarget.value)}
-              value={description}
+              defaultValue={description}
               placeholder="Enter Description"
               className="mt-2"
+              rows={8}
             />
           </div>
 

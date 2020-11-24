@@ -9,12 +9,13 @@ export interface IPeople {
   name: string;
   position: string;
   description: string;
-  avatar: string;
+  avatar: any;
 }
 export interface IPeopleFormData {
   name: string;
   position: string;
   description: string;
+  avatar: any;
 }
 
 export interface IPoepleAction {

@@ -4,7 +4,7 @@ import LogoImg from "assets/imgs/logo.png";
 const Logo: React.FC = () => {
   return (
     <div>
-      <img src={LogoImg} className="h-auto w-16" alt="logo" />
+      <img src={LogoImg} className="h-auto w-16 relative z-40" alt="logo" />
     </div>
   );
 };

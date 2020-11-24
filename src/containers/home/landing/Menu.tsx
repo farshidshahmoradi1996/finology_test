@@ -3,7 +3,7 @@ import MenuItem from "./MenuItem";
 
 const Menu: React.FC = () => {
   return (
-    <ul className="flex">
+    <ul className=" hidden md:flex ">
       <MenuItem>Home</MenuItem>
       <MenuItem>About Us</MenuItem>
       <MenuItem>Services</MenuItem>
