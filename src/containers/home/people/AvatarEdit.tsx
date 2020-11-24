@@ -3,7 +3,7 @@ import { ReactComponent as UserSvg } from "assets/svg/user.svg";
 import { ReactComponent as PencilSvg } from "assets/svg/pencil.svg";
 interface Props {}
 
-const AvatarEdit: React.FC<Props> = ({}) => {
+const AvatarEdit: React.FC<Props> = () => {
   const imgeInputRef = useRef(null);
   return (
     <>

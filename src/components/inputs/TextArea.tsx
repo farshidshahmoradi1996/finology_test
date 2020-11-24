@@ -5,6 +5,7 @@ interface Props extends React.HTMLAttributes<HTMLTextAreaElement> {
   error?: string;
   className?: string;
   value?: string;
+  rows?: number;
 }
 
 const TextArea: React.FC<Props> = ({
@@ -12,6 +13,7 @@ const TextArea: React.FC<Props> = ({
   error,
   value,
   className,
+  rows,
   ...rest
 }) => {
   return (
@@ -20,6 +22,7 @@ const TextArea: React.FC<Props> = ({
 
       <textarea
         {...rest}
+        rows={rows}
         className="px-3 py-4 text-gray-900 placeholder-gray-300 rounded-md border w-full text-sm duration-300 mt-2 focus:border-primary"
       >
         {value}

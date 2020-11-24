@@ -7,8 +7,8 @@ interface Props {
 
 const Head: React.FC<Props> = ({ onAddRequest }) => {
   return (
-    <div className="md:flex px-12 items-center justify-between">
-      <div className="md:w-8/12 flex">
+    <div className="md:flex  px-12 items-center justify-between">
+      <div className="md:w-8/12 flex flex flex-col md:flex-row  items-center container px-12">
         <div className="w-12 h-12 bg-red-600 rounded-full flex justify-center items-center">
           <HappyFaceSvg />
         </div>

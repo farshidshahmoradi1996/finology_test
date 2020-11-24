@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as CancelSvg } from "assets/svg/cancel.svg";
 import AvatarEdit from "./AvatarEdit";
 import { IPeople, IPeopleFormData } from "types";
-import { useForm, Controller } from "react-hook-form";
 interface Props {
   isOpen: boolean;
   onCloseRequested(): void;
